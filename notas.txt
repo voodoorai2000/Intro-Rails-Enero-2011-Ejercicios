@@ -1,0 +1,15 @@
+Documentación de Ruby:
+	http://ruby-doc.org/core-1.8.7/index.html
+	
+Ejecutar los tests:
+	Desde el directory con el archivo *_spec.rb ejecutar el comando:
+	rspec <nombre_del_archivo_spec.rb> --color --format documentation
+
+Probar cosas en la consola de ruby:
+	Ejecutar el comando:
+		irb
+		require '<nombre_archivo>' (hay que estar en el directorio del archivo)
+		
+	desde ahí ya podemos hacer cosas como:
+		people = ["Jose", "Peter", "Ana"]
+		people.first # devolverá "Jose"
