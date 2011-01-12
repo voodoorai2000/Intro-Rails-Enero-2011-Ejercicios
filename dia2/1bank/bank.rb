@@ -1,11 +1,11 @@
 #crear una clase "Bank"
 class Bank
   #crear un "attr_accessor" para las variables "revenue" y "costs"
-  attr_accessor :revenue, :costs
-	
+  attr_accessor :revenue
+
 	#crear un metodo initialize
 	#que inicialice las variables de instancia "revenue" y "costs" a cero
-	def	initialize
+	def	initialize 
 		@revenue = 0
 		@costs = 0
 	end
@@ -20,11 +20,15 @@ class Bank
 	#crear un metodo "debit"
 	#que reciba un parametro "amount"
 	#y se lo sume a la variable de instancia "costs"
-
+  def debit(amount)
+    @costs += amount
+  end
 
 	#crear un metodo "balance"
 	#que devuelva la diferencia entre las variables de instancia "revenue" y "costs"
-
+  def balance
+    @revenue - @costs
+  end
 
   #crear un metodo "multiple_credits"
   #que reciba un Array de valores como el parametro "amounts"

@@ -1,0 +1,36 @@
+Layouts
+	Poner un h1 "Eventos de <tu_nombre>" que se vea en todas las páginas
+
+Helpers
+		Crear un helper "logged_in?" que:
+		  1) si "logged_in?" devuelve "true" muestre el nombre de usuario y el texto "Welcome <nombre_usuario>" 
+		  2) si "logged_in?" devuelve "false" muestre un enlace con el texto "please sign in" y que identificate sea un link que no vaya a ninguna parte 
+  		pista 
+			  crear un metodo en app/helpers/application_helper.rb llamado "logged_in?" y dentro del metodo:
+  		  	crear una variable de instancia @username con un nombre
+  		  	hacer que el metodo devuelva true y comprobar en la vista
+  		  	hacer que el metodo devuelva false y comprobar en la vista
+
+Partials
+		meter la logica para mostrar el mensaje de bienvenida o en link para identificarse en un partial "shared/user_menu"
+    comprobar que se ve en distintas paginas de la aplicacion
+    pista buscar "Using Partials" en "http://guides.rubyonrails.org/layouts_and_rendering.html#using-partials"
+
+Controllers
+	Before Filter
+		crear un evento "Fiesta de 500 euros"
+		crear un before_filter "authenticate" que redirija al index al intentar acceder solo al "show" del evento "Fiesta de 500 euros" 
+		Pista http://rails.rubyonrails.org/classes/ActionController/Filters/ClassMethods.html
+		Añadir un notice al redirect_to con el mensaje "acceso restringido"
+		Añadir el helper "notice" al layout para que muestre el mensaje "acceso restringido" y quitarlo del show de eventos para que no esté duplicado
+		
+Añadir Campos
+	Crear una migracion para añadir el campo email al modelo "people"
+	Mostrar el email en las vistas de index, show, y formularios.
+	pista buscar "Creating a Standalone Migration" en http://guides.rubyonrails.org/migrations.html
+	
+Deployar a Heroku
+  git add .
+  git commit -m "Playing with layouts, helpers, partials, before_filters and new fields"
+  git push heroku master
+  heroku rake db:migrate
