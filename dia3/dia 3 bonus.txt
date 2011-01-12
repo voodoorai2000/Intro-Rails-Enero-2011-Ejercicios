@@ -1,0 +1,10 @@
+Ver desde el navegador los eventos en formato xml y json
+Ver desde el navegador las personas en formato xml sin el apellido
+pista buscar ActiveRecord::Serialization en http://api.rubyonrails.org/
+
+Iphone
+	crear el mime type iphone
+	pista buscar "12.2 RESTful Downloads" en http://guides.rubyonrails.org/action_controller_overview.html
+	hacer que la accion index del controlador personas responda al formato iphone
+	crear la vista de iphone para el index the personas
+	comprobar en la vista
