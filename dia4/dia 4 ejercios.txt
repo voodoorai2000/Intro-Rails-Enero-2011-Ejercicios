@@ -1,0 +1,47 @@
+Validaciones
+	Añadir una validadcion para la presencia del nombre del evento
+	Pista Buscar "validates" en http://api.rubyonrails.org/
+	Intentar crear un evento sin nombre desde el navegador deberíamos ver un error
+		
+Consultas a base de datos
+  crear un par de eventos con nombre diferentes desde el navegador
+  ordenar las eventos por nombre en la acción index del controlador
+  Pista busar "Ordering" en http://guides.rubyonrails.org/active_record_querying.html
+  Comprobar el resultado desde el navegador
+
+Filtros
+  Crear un filtro llamado "ordered_by_name" que ordene los eventos por nombre
+  Pista buscar "scope" (ActiveRecord::NamedScope) en http://api.rubyonrails.org/
+  
+  Utilizar el filtro "ordered_by_date" en la accion index del controlador eventos
+
+Associaciones
+	crear un scaffold para una "invitation" con los attributos:
+	"body"(texto) "person_id" (numero entero) y "event_id" (numero entero)
+	migrar la base de datos
+	cambiar el text_field para "person" en el partial "form" de invitaciones por un select con el nombre e id para cada persona
+	pista buscar "select" (ActionView::Helpers::FormOptionsHelper) en http://api.rubyonrails.org/
+
+	cambiar el text_field para "event" en el partial "form" de invitaciones por un select con el nombre e id para cada evento
+
+	comprobar que podemos guardar la persona y evento de una invitacion desde el navegador
+
+	mostrar el nombre de la person y evento en vez de su id en el show de una invitacion:
+	  proceso a seguir:
+			añadir un belongs_to para "person" y "event" en el modelo "invitation"
+			pista http://guides.rubyonrails.org/association_basics.html#the-belongs_to-association
+			cambiar "person_id" y "event_id" en el show de una invitacion por el nombre de cada uno
+			comprobar desde el navegador que se ven los nombres de persona y evento en el show de una invitacion
+
+	mostrar el nombre de los invitados en el show de un evento:
+	  proceso a seguir:
+			añadir un has_many "invitations" y un has_many "people" through "invitations" al modelo "event"
+			pista "http://guides.rubyonrails.org/association_basics.html#the-has_many-through-association"
+
+			añadir una variable de instancia con los invitados del evento en la accion show del controlador eventos
+			pista buscar "4.3.1.1 collection" en http://guides.rubyonrails.org/association_basics.html
+
+			crear un loop para mostrar los invitados de un evento en la vista show de eventos
+			comprobar que se ven los guests de un evento desde el navegador
+
+			Levantase y gritar soy el puto amo!
