@@ -1,0 +1,1 @@
+Añadir una foto como attachment al email de una invitación y comprobar que nos llega a nuestro email desde heroku
